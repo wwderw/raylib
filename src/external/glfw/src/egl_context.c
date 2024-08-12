@@ -375,7 +375,7 @@ GLFWbool _glfwInitEGL(void)
 #elif defined(__OpenBSD__) || defined(__NetBSD__)
         "libEGL.so",
 #else
-        "libEGL.so.1",
+        "libEGL.so",
 #endif
         NULL
     };
@@ -770,7 +770,7 @@ GLFWbool _glfwCreateContextEGL(_GLFWwindow* window,
 #elif defined(__OpenBSD__) || defined(__NetBSD__)
             "libGLESv2.so",
 #else
-            "libGLESv2.so.2",
+            "libGLESv2.so",
 #endif
             NULL
         };
