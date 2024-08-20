@@ -134,9 +134,9 @@ fn compileRaylib(b: *std.Build, target: std.Build.ResolvedTarget, optimize: std.
             try c_source_files.append("rglfw.c");
             raylib.linkSystemLibrary("winmm");
             raylib.linkSystemLibrary("gdi32");
-            raylib.linkSystemLibrary("SDL2");
+            raylib.linkSystemLibrary("opengl32");
 
-            raylib.defineCMacro("PLATFORM_DESKTOP_SDL", null);
+            raylib.defineCMacro("PLATFORM_DESKTOP", null);
         },
         .linux => {
             if (!options.platform_drm) {
